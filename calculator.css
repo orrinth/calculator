@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: slategray;
+}
+
+.housing {
+    position: absolute;
+    top: calc(50vh - 20.5rem);
+    left: calc(50vw - 11rem);
+    background: black;
+    width: 22rem;
+    height: 40rem;
+    border: 0.625rem solid black;
+    outline: 0.3125rem solid gray;
+    -moz-outline-radius: 0.625rem;
+    transition-property: outline-color;
+    transition-duration: 0.29s;
+    transition-timing-function: ease-in;
+}
+
+.housing:hover {
+    outline-color: white;
+    box-shadow: 0 0 3.125rem 0.625rem black;
+}
+
+.keypad {
+    background: #333;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 0.5rem;
+}
+
+h1 {
+    grid-row: 1;
+    grid-column: 2/4;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: oblique;
+    text-align: center;
+
+    margin-top: 1rem;
+}
+
+button {
+    background: #2690d4;
+    color: white;
+    box-sizing: border-box;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+}
+
+#display {
+    box-sizing: border-box;
+    background: white;
+    border: none;
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    font-size: 5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    grid-column: 1/5;
+    grid-row: 2 / 4;
+    text-align: right;
+    overflow-x: scroll;
+}
+
+#zero {
+    grid-column: 1/3;
+}
+
+#equals {
+    grid-column: 1/5;
+}
+
+#one, #two, #three, #add {
+    grid-row: 4;
+}
+
+#four, #five, #six, #subtract {
+    grid-row: 5;
+}
+
+#seven, #eight, #nine, #times {
+    grid-row: 6;
+}
+
+#zero, #dot, #divide {
+    grid-row: 7;
+}
+
+#equals {
+    grid-row: 8;
+    grid-column: 1 / 4;
+}
+
+#clean {
+    grid-row: 8;
+    grid-column: 4 / 5;
+    background: red;
+}
+
+#clean:hover {
+    background: darkred;
+    color: gray;
+}
+
+#add, #subtract, #times, #divide {
+    background: gold;
+    color: black;
+}
+
+#add:hover, #subtract:hover, #times:hover, #divide:hover {
+    background: #cea135;
+    color: white;
+}
+
+button:hover {
+    background: #217db6;
+    color: lightgray;
+}
